@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -107,6 +107,14 @@ const TEST_ROUTE = /\/\[[^/]+?\](?=\/|$)/;
 function isDynamicRoute(route) {
   return TEST_ROUTE.test(route);
 }
+
+/***/ }),
+
+/***/ 0:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("1TCz");
+
 
 /***/ }),
 
@@ -169,11 +177,172 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "1TCz":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = __webpack_require__("YQMk");
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
 
+// EXTERNAL MODULE: external "react/jsx-runtime"
+var jsx_runtime_ = __webpack_require__("F5FC");
+
+// EXTERNAL MODULE: ./styles/globals.css
+var globals = __webpack_require__("zPlV");
+
+// EXTERNAL MODULE: ./node_modules/next/link.js
+var next_link = __webpack_require__("YFqc");
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+
+// EXTERNAL MODULE: ./utils/helpers.js
+var helpers = __webpack_require__("IF/j");
+
+// EXTERNAL MODULE: ./node_modules/react-toastify/dist/ReactToastify.css
+var ReactToastify = __webpack_require__("jDDT");
+
+// EXTERNAL MODULE: external "react-toastify"
+var external_react_toastify_ = __webpack_require__("oAEb");
+
+// CONCATENATED MODULE: ./ecommerce.config.js
+// number of categories to show in the navigation by default
+const navItemLength = 5;
+
+// CONCATENATED MODULE: ./layouts/layout.js
+
+
+
+
+
+
+
+function Layout({
+  children,
+  categories
+}) {
+  if (categories.length > navItemLength) {
+    categories = categories.slice(0, navItemLength);
+  }
+
+  return /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+    children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("nav", {
+      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+        className: "flex justify-center",
+        children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+          className: " mobile:px-12 sm:flex-row sm:pt-12 sm:pb-6 desktop:px-0 px-4 pt-8 flex flex-col w-fw ",
+          children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+            className: "mb-4 sm:mr-16 max-w-48 sm:max-w-none",
+            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
+              href: "/",
+              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+                "aria-label": "Home",
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("img", {
+                  src: "/logo.png",
+                  alt: "logo",
+                  width: "90",
+                  height: "28"
+                })
+              })
+            })
+          }), /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+            className: "flex flex-wrap mt-1",
+            children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
+              href: "/",
+              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+                "aria-label": "Home",
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("p", {
+                  className: " sm:mr-8 sm:mb-0 mb-4 text-left text-smaller mr-4 ",
+                  children: "Home"
+                })
+              })
+            }), categories.map((category, index) => /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
+              href: `/category/${Object(helpers["b" /* slugify */])(category)}`,
+              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+                "aria-label": category,
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("p", {
+                  className: " sm:mr-8 sm:mb-0 mb-4 text-left text-smaller mr-4 ",
+                  children: category.charAt(0).toUpperCase() + category.slice(1)
+                })
+              })
+            }, index)), /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
+              href: "/categories",
+              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+                "aria-label": "All categories",
+                children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("p", {
+                  className: " sm:mr-8 sm:mb-0 mb-4 text-left text-smaller mr-4  ",
+                  children: "All"
+                })
+              })
+            })]
+          })]
+        })
+      })
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+      className: "mobile:px-10 px-4 pb-10 flex justify-center",
+      children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("main", {
+        className: "w-fw",
+        children: children
+      })
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("footer", {
+      className: "flex justify-center",
+      children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
+        className: " sm:flex-row sm:items-center flex-col flex w-fw px-12 py-8 desktop:px-0 border-solid border-t border-gray-300",
+        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])("span", {
+          className: "block text-gray-700 text-xs",
+          children: "Copyright \xA9 2021 JAMstack Ecommerce. All rights reserved."
+        }), /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
+          className: " sm:justify-end sm:m-0 flex flex-1 mt-4 ",
+          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
+            href: "/admin",
+            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
+              "aria-label": "Admin panel",
+              children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("p", {
+                className: "text-sm font-semibold",
+                children: "Admins"
+              })
+            })
+          })
+        })]
+      })
+    }), /*#__PURE__*/Object(jsx_runtime_["jsx"])(external_react_toastify_["ToastContainer"], {
+      autoClose: 3000
+    })]
+  });
+}
+// EXTERNAL MODULE: ./utils/categoryProvider.js
+var categoryProvider = __webpack_require__("i2XQ");
+
+// CONCATENATED MODULE: ./pages/_app.js
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+function Ecommerce({
+  Component,
+  pageProps,
+  categories
+}) {
+  return /*#__PURE__*/Object(jsx_runtime_["jsx"])(Layout, {
+    categories: categories,
+    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(Component, _objectSpread({}, pageProps))
+  });
+}
+
+Ecommerce.getInitialProps = async () => {
+  const categories = await Object(categoryProvider["a" /* default */])();
+  return {
+    categories
+  };
+};
+
+/* harmony default export */ var _app = __webpack_exports__["default"] = (Ecommerce);
 
 /***/ }),
 
@@ -322,13 +491,6 @@ function normalizeLocalePath(pathname, locales) {
     detectedLocale
   };
 }
-
-/***/ }),
-
-/***/ "5mtF":
-/***/ (function(module, exports) {
-
-module.exports = require("react-icons/fa");
 
 /***/ }),
 
@@ -510,6 +672,190 @@ function getTrimmedString(string, length = 8) {
 }
 
 
+
+/***/ }),
+
+/***/ "LaK9":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("kNaX");
+/* harmony import */ var uuid__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(uuid__WEBPACK_IMPORTED_MODULE_0__);
+
+let inventory = [{
+  categories: ['new arrivals'],
+  name: 'Timber Gray Sofa 2.0',
+  price: '1000',
+  image: '/products/couch1.png',
+  description: 'Stay a while. The Timber charme chocolat sofa is set atop an oak trim and flaunts fluffy leather back and seat cushions. Over time, this brown leather sofa’s full-aniline upholstery will develop a worn-in vintage look. Snuggle up with your cutie (animal or human) and dive into a bowl of popcorn. This sofa is really hard to leave. Natural color variations, wrinkles and creases are part of the unique characteristics of this leather. It will develop a relaxed vintage look with regular use.',
+  brand: 'Jason Bourne',
+  currentInventory: 4
+}, {
+  categories: ['sofas', 'living room'],
+  name: 'Carmel Brown Sofa',
+  price: '1000',
+  image: '/products/couch5.png',
+  description: 'Stay a while. The Timber charme chocolat sofa is set atop an oak trim and flaunts fluffy leather back and seat cushions. Over time, this brown leather sofa’s full-aniline upholstery will develop a worn-in vintage look. Snuggle up with your cutie (animal or human) and dive into a bowl of popcorn. This sofa is really hard to leave. Natural color variations, wrinkles and creases are part of the unique characteristics of this leather. It will develop a relaxed vintage look with regular use.',
+  brand: 'Jason Bourne',
+  currentInventory: 2
+}, {
+  categories: ['new arrivals', 'sofas'],
+  name: 'Mod Leather Sofa',
+  price: '800',
+  image: '/products/couch6.png',
+  description: 'Easy to love. The Sven in birch ivory looks cozy and refined, like a sweater that a fancy lady wears on a coastal vacation. This ivory loveseat has a tufted bench seat, loose back pillows and bolsters, solid walnut legs, and is ready to make your apartment the adult oasis you dream of. Nestle it with plants, an ottoman, an accent chair, or 8 dogs. Your call.',
+  brand: 'Jason Bourne',
+  currentInventory: 8
+}, {
+  categories: ['new arrivals', 'sofas'],
+  name: 'Thetis Gray Love Seat',
+  price: '900',
+  image: '/products/couch7.png',
+  description: 'You know your dad’s incredible vintage bomber jacket? The Nirvana dakota tan leather sofa is that jacket, but in couch form. With super-plush down-filled cushions, a corner-blocked wooden frame, and a leather patina that only gets better with age, the Nirvana will have you looking cool and feeling peaceful every time you take a seat. Looks pretty great with a sheepskin throw, if we may say so. With use, this leather will become softer and more wrinkled and the cushions will take on a lived-in look, like your favorite leather jacket.',
+  brand: 'Jason Bourne',
+  currentInventory: 10
+}, {
+  categories: ['on sale', 'sofas'],
+  name: 'Sven Tan Matte',
+  price: '1200',
+  image: '/products/couch8.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 7
+}, {
+  categories: ['on sale', 'sofas'],
+  name: 'Otis Malt Sofa',
+  price: '500',
+  image: '/products/couch9.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 13
+}, {
+  categories: ['on sale', 'sofas'],
+  name: 'Ceni Brown 3 Seater',
+  price: '650',
+  image: '/products/couch10.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 9
+}, {
+  categories: ['sofas', 'living room'],
+  name: 'Jameson Jack Lounger',
+  price: '1230',
+  image: '/products/couch11.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 24
+}, {
+  categories: ['sofas'],
+  name: 'Galaxy Blue Sofa',
+  price: '800',
+  image: '/products/couch2.png',
+  description: 'Easy to love. The Sven in birch ivory looks cozy and refined, like a sweater that a fancy lady wears on a coastal vacation. This ivory loveseat has a tufted bench seat, loose back pillows and bolsters, solid walnut legs, and is ready to make your apartment the adult oasis you dream of. Nestle it with plants, an ottoman, an accent chair, or 8 dogs. Your call.',
+  brand: 'Jason Bourne',
+  currentInventory: 43
+}, {
+  categories: ['new arrivals', 'sofas'],
+  name: 'Markus Green Love Seat',
+  price: '900',
+  image: '/products/couch3.png',
+  description: 'You know your dad’s incredible vintage bomber jacket? The Nirvana dakota tan leather sofa is that jacket, but in couch form. With super-plush down-filled cushions, a corner-blocked wooden frame, and a leather patina that only gets better with age, the Nirvana will have you looking cool and feeling peaceful every time you take a seat. Looks pretty great with a sheepskin throw, if we may say so. With use, this leather will become softer and more wrinkled and the cushions will take on a lived-in look, like your favorite leather jacket.',
+  brand: 'Jason Bourne',
+  currentInventory: 2
+}, {
+  categories: ['on sale', 'sofas'],
+  name: 'Dabit Matte Black',
+  price: '1200',
+  image: '/products/couch4.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  currentInventory: 14
+}, {
+  categories: ['on sale', 'chairs'],
+  name: 'Embrace Blue',
+  price: '300',
+  image: '/products/chair1.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 12
+}, {
+  categories: ['on sale', 'chairs'],
+  name: 'Nord Lounger',
+  price: '825',
+  image: '/products/chair2.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 13
+}, {
+  categories: ['on sale', 'chairs'],
+  name: 'Ceni Matte Oranve',
+  price: '720',
+  image: '/products/chair3.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 33
+}, {
+  categories: ['on sale', 'chairs'],
+  name: 'Abisko Green Recliner',
+  price: '2000',
+  image: '/products/chair4.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 23
+}, {
+  categories: ['on sale', 'chairs'],
+  name: 'Denim on Denim Single',
+  price: '1100',
+  image: '/products/chair5.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 13
+}, {
+  categories: ['on sale', 'chairs'],
+  name: 'Levo Tan Lounge Chair',
+  price: '600',
+  image: '/products/chair6.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 15
+}, {
+  categories: ['on sale', 'chairs'],
+  name: 'Anime Tint Recliner',
+  price: '775',
+  image: '/products/chair7.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 44
+}, {
+  categories: ['on sale', 'chairs'],
+  name: 'Josh Jones Red Chair',
+  price: '1200',
+  image: '/products/chair8.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 17
+}, {
+  categories: ['on sale', 'chairs'],
+  name: 'Black Sand Lounge',
+  price: '1600',
+  image: '/products/chair9.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 28
+}, {
+  categories: ['on sale', 'chairs'],
+  name: 'Mint Beige Workchair',
+  price: '550',
+  image: '/products/chair10.png',
+  description: 'You don’t have to go outside to be rugged. The Cigar rawhide sofa features a sturdy corner-blocked wooden frame and raw seams for that Malboro-person look. This brown leather sofa is cozy in a cottage, cabin, or a condo. And the leather (the leather!) becomes more beautiful with use: subtle character markings such as insect bites, healed scars, and grain variation reflects a real vintage. Saddle up and pass the remote.',
+  brand: 'Jason Bourne',
+  currentInventory: 31
+} // { 
+];
+inventory.map(i => {
+  i.id = Object(uuid__WEBPACK_IMPORTED_MODULE_0__["v4"])();
+  return i;
+});
+/* harmony default export */ __webpack_exports__["a"] = (inventory);
 
 /***/ }),
 
@@ -780,46 +1126,6 @@ module.exports = require("next/dist/next-server/lib/router-context.js");
 
 /***/ }),
 
-/***/ "QQR7":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return QuantityPicker; });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-function QuantityPicker({
-  increment,
-  decrement,
-  numberOfitems,
-  hideQuantityLabel
-}) {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-    className: `flex items-center`,
-    children: [!hideQuantityLabel && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-      className: "px-2 text-xs",
-      children: "QUANTITY"
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("button", {
-      className: " w-10 h-10 text-xl md:w-8 md:h-8 md:text-sm  cursor-pointer text-center border pb-.5 hover:bg-gray-900 hover:text-white focus:outline-none ",
-      onClick: increment,
-      children: "+"
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-      className: " w-10 h-10 pt-2 text-base md:w-8 md:h-8 md:pt-2 md:text-xs m-0 border-t border-b text-center",
-      children: numberOfitems
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("button", {
-      className: " w-10 h-10 text-2xl md:w-8 md:h-8 md:text-sm cursor-pointer text-center border pb-.5 hover:bg-gray-900 hover:text-white focus:outline-none ",
-      onClick: decrement,
-      children: "-"
-    })]
-  });
-}
-
-/***/ }),
-
 /***/ "S3md":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -845,142 +1151,6 @@ module.exports = _interopRequireDefault;
 /***/ (function(module, exports) {
 
 module.exports = require("next/dist/next-server/lib/router/utils/get-asset-path-from-route.js");
-
-/***/ }),
-
-/***/ "VnCb":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return SiteContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContextProviderComponent; });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("oAEb");
-/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_toastify__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-const STORAGE_KEY = 'NEXT_ECOMMERCE_STARTER_';
-const initialState = {
-  cart: [],
-  numberOfItemsInCart: 0,
-  total: 0
-};
-const SiteContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createContext();
-
-function calculateTotal(cart) {
-  const total = cart.reduce((acc, next) => {
-    const quantity = next.quantity;
-    acc = acc + JSON.parse(next.price) * quantity;
-    return acc;
-  }, 0);
-  return total;
-}
-
-class ContextProviderComponent extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
-  constructor(...args) {
-    super(...args);
-
-    _defineProperty(this, "setItemQuantity", item => {
-      const storageState = JSON.parse(window.localStorage.getItem(STORAGE_KEY));
-      const {
-        cart
-      } = storageState;
-      const index = cart.findIndex(cartItem => cartItem.id === item.id);
-      cart[index].quantity = item.quantity;
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        cart,
-        numberOfItemsInCart: cart.length,
-        total: calculateTotal(cart)
-      }));
-      this.forceUpdate();
-    });
-
-    _defineProperty(this, "addToCart", item => {
-      const storageState = JSON.parse(window.localStorage.getItem(STORAGE_KEY));
-      const {
-        cart
-      } = storageState;
-
-      if (cart.length) {
-        const index = cart.findIndex(cartItem => cartItem.id === item.id);
-
-        if (index >= Number(0)) {
-          /* If this item is already in the cart, update the quantity */
-          cart[index].quantity = cart[index].quantity + item.quantity;
-        } else {
-          /* If this item is not yet in the cart, add it */
-          cart.push(item);
-        }
-      } else {
-        /* If no items in the cart, add the first item. */
-        cart.push(item);
-      }
-
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        cart,
-        numberOfItemsInCart: cart.length,
-        total: calculateTotal(cart)
-      }));
-      Object(react_toastify__WEBPACK_IMPORTED_MODULE_1__["toast"])("Successfully added item to cart!", {
-        position: react_toastify__WEBPACK_IMPORTED_MODULE_1__["toast"].POSITION.TOP_LEFT
-      });
-      this.forceUpdate();
-    });
-
-    _defineProperty(this, "removeFromCart", item => {
-      const storageState = JSON.parse(window.localStorage.getItem(STORAGE_KEY));
-      let {
-        cart
-      } = storageState;
-      cart = cart.filter(c => c.id !== item.id);
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        cart,
-        numberOfItemsInCart: cart.length,
-        total: calculateTotal(cart)
-      }));
-      this.forceUpdate();
-    });
-
-    _defineProperty(this, "clearCart", () => {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(initialState));
-      this.forceUpdate();
-    });
-  }
-
-  componentDidMount() {
-    if (false) {}
-  }
-
-  render() {
-    let state = initialState;
-
-    if (false) {}
-
-    return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(SiteContext.Provider, {
-      value: _objectSpread(_objectSpread({}, state), {}, {
-        addToCart: this.addToCart,
-        clearCart: this.clearCart,
-        removeFromCart: this.removeFromCart,
-        setItemQuantity: this.setItemQuantity
-      }),
-      children: this.props.children
-    });
-  }
-
-}
-
-
 
 /***/ }),
 
@@ -1016,238 +1186,6 @@ exports.normalizePathTrailingSlash = normalizePathTrailingSlash;
 
 module.exports = __webpack_require__("cTJO")
 
-
-/***/ }),
-
-/***/ "YQMk":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("YFqc");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("cDcd");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("5mtF");
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _context_mainContext__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("VnCb");
-/* harmony import */ var _utils_currencyProvider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("fL5F");
-/* harmony import */ var _utils_helpers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__("IF/j");
-/* harmony import */ var _components_QuantityPicker__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("QQR7");
-/* harmony import */ var _components_Image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("xY5u");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__("xnum");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _components_CartLink__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__("d9Pb");
-
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-
-
-
-
-
-
-const Cart = ({
-  context
-}) => {
-  const {
-    0: renderClientSideComponent,
-    1: setRenderClientSideComponent
-  } = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false);
-  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
-    setRenderClientSideComponent(true);
-  }, []);
-  const {
-    numberOfItemsInCart,
-    cart,
-    removeFromCart,
-    total,
-    setItemQuantity
-  } = context;
-  const cartEmpty = numberOfItemsInCart === Number(0);
-
-  function increment(item) {
-    item.quantity = item.quantity + 1;
-    setItemQuantity(item);
-  }
-
-  function decrement(item) {
-    if (item.quantity === 1) return;
-    item.quantity = item.quantity - 1;
-    setItemQuantity(item);
-  }
-
-  if (!renderClientSideComponent) return null;
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_CartLink__WEBPACK_IMPORTED_MODULE_10__[/* default */ "a"], {}), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-      className: "flex flex-col items-center pb-10",
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_9___default.a, {
-        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("title", {
-          children: "Jamstack ECommerce - Cart"
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
-          name: "description",
-          content: `Jamstack ECommerce - Shopping cart`
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
-          property: "og:title",
-          content: "Jamstack ECommerce - Cart"
-        }, "title")]
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-        className: " flex flex-col w-full c_large:w-c_large ",
-        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-          className: "pt-10 pb-8",
-          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("h1", {
-            className: "text-5xl font-light",
-            children: "Your Cart"
-          })
-        }), cartEmpty ? /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("h3", {
-          children: "No items in cart."
-        }) : /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-          className: "flex flex-col",
-          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-            children: cart.map(item => {
-              return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-                className: "border-b py-10",
-                children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-                  className: "flex items-center hidden md:flex",
-                  children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-                    href: `/product/${Object(_utils_helpers__WEBPACK_IMPORTED_MODULE_6__[/* slugify */ "b"])(item.name)}`,
-                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-                      "aria-label": item.name,
-                      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Image__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"], {
-                        className: "w-32 m-0",
-                        src: item.image,
-                        alt: item.name
-                      })
-                    })
-                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-                    href: `/product/${Object(_utils_helpers__WEBPACK_IMPORTED_MODULE_6__[/* slugify */ "b"])(item.name)}`,
-                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-                      "aria-label": item.name,
-                      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-                        className: " m-0 pl-10 text-gray-600 w-60 ",
-                        children: item.name
-                      })
-                    })
-                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-                    className: "ml-4",
-                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_QuantityPicker__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
-                      numberOfitems: item.quantity,
-                      increment: () => increment(item),
-                      decrement: () => decrement(item)
-                    })
-                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-                    className: "flex flex-1 justify-end",
-                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-                      className: "m-0 pl-10 text-gray-900 tracking-wider",
-                      children: _utils_currencyProvider__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"] + item.price
-                    })
-                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-                    role: "button",
-                    onClick: () => removeFromCart(item),
-                    className: " m-0 ml-10 text-gray-900 text-s cursor-pointer ",
-                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__["FaTimes"], {})
-                  })]
-                }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-                  className: "flex items-center flex md:hidden",
-                  children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-                    href: `/product/${Object(_utils_helpers__WEBPACK_IMPORTED_MODULE_6__[/* slugify */ "b"])(item.name)}`,
-                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-                      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_Image__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"], {
-                        className: "w-32 m-0",
-                        src: item.image,
-                        alt: item.name
-                      })
-                    })
-                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-                    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-                      href: `/product/${Object(_utils_helpers__WEBPACK_IMPORTED_MODULE_6__[/* slugify */ "b"])(item.name)}`,
-                      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-                        "aria-label": item.name,
-                        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-                          className: " m-0 pl-6 text-gray-600 text-base ",
-                          children: item.name
-                        })
-                      })
-                    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-                      className: "ml-6 mt-4 mb-2",
-                      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_components_QuantityPicker__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"], {
-                        hideQuantityLabel: true,
-                        numberOfitems: item.quantity,
-                        increment: () => increment(item),
-                        decrement: () => decrement(item)
-                      })
-                    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-                      className: "flex flex-1",
-                      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-                        className: "text-lg m-0 pl-6 pt-4 text-gray-900 tracking-wider",
-                        children: _utils_currencyProvider__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"] + item.price
-                      })
-                    })]
-                  }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-                    role: "button",
-                    onClick: () => removeFromCart(item),
-                    className: " m-0 ml-10 text-gray-900 text-s cursor-pointer mr-2 ",
-                    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__["FaTimes"], {})
-                  })]
-                })]
-              }, item.id);
-            })
-          })
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-          className: "flex flex-1 justify-end py-8",
-          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-            className: "text-sm pr-10",
-            children: "Total"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-            className: "font-semibold tracking-wide",
-            children: _utils_currencyProvider__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"] + total
-          })]
-        }), !cartEmpty && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-          href: "/checkout",
-          className: "flex flex-1 justify-end",
-          children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-            "aria-label": "Check out",
-            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-              className: "cursor-pointer flex items-center",
-              children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-                className: "text-gray-600 text-sm mr-2",
-                children: "Proceed to check out"
-              }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__["FaLongArrowAltRight"], {
-                className: "text-gray-600"
-              })]
-            })
-          })
-        })]
-      })]
-    })]
-  });
-};
-
-function CartWithContext(props) {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_context_mainContext__WEBPACK_IMPORTED_MODULE_4__[/* ContextProviderComponent */ "a"], {
-    children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_context_mainContext__WEBPACK_IMPORTED_MODULE_4__[/* SiteContext */ "b"].Consumer, {
-      children: context => /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(Cart, _objectSpread(_objectSpread({}, props), {}, {
-        context: context
-      }))
-    })
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (CartWithContext);
 
 /***/ }),
 
@@ -1575,99 +1513,6 @@ function Link(props) {
 
 var _default = Link;
 exports.default = _default;
-
-/***/ }),
-
-/***/ "d9Pb":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__("F5FC");
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__("cDcd");
-
-// EXTERNAL MODULE: ./context/mainContext.js
-var mainContext = __webpack_require__("VnCb");
-
-// EXTERNAL MODULE: external "react-icons/fa"
-var fa_ = __webpack_require__("5mtF");
-
-// EXTERNAL MODULE: ./node_modules/next/link.js
-var next_link = __webpack_require__("YFqc");
-var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-
-// CONCATENATED MODULE: ./theme.js
-const colors = {
-  primary: '#89bdf9'
-};
-
-// CONCATENATED MODULE: ./components/CartLink.js
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-
-
-
-const {
-  primary
-} = colors;
-
-function CartLink(props) {
-  const {
-    0: renderClientSideComponent,
-    1: setRenderClientSideComponent
-  } = Object(external_react_["useState"])(false);
-  Object(external_react_["useEffect"])(() => {
-    setRenderClientSideComponent(true);
-  }, []);
-  let {
-    context: {
-      numberOfItemsInCart = 0
-    }
-  } = props;
-  return /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("div", {
-      className: "fixed sm:top-53 right-24 desktop:right-flexiblemargin top-40 z-10",
-      children: /*#__PURE__*/Object(jsx_runtime_["jsxs"])("div", {
-        className: "flex flex-1 justify-end pr-4 relative",
-        children: [/*#__PURE__*/Object(jsx_runtime_["jsx"])(link_default.a, {
-          href: "/cart",
-          children: /*#__PURE__*/Object(jsx_runtime_["jsx"])("a", {
-            "aria-label": "Cart",
-            children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(fa_["FaShoppingCart"], {})
-          })
-        }), renderClientSideComponent && numberOfItemsInCart > Number(0) && /*#__PURE__*/Object(jsx_runtime_["jsx"])(fa_["FaCircle"], {
-          color: primary,
-          size: 12,
-          suppressHydrationWarning: true
-        })]
-      })
-    })
-  });
-}
-
-function CartLinkWithContext(props) {
-  return /*#__PURE__*/Object(jsx_runtime_["jsx"])(mainContext["a" /* ContextProviderComponent */], {
-    children: /*#__PURE__*/Object(jsx_runtime_["jsx"])(mainContext["b" /* SiteContext */].Consumer, {
-      children: context => /*#__PURE__*/Object(jsx_runtime_["jsx"])(CartLink, _objectSpread(_objectSpread({}, props), {}, {
-        context: context
-      }))
-    })
-  });
-}
-
-/* harmony default export */ var components_CartLink = __webpack_exports__["a"] = (CartLinkWithContext);
 
 /***/ }),
 
@@ -2713,15 +2558,6 @@ Router.events = (0, _mitt.default)();
 
 /***/ }),
 
-/***/ "fL5F":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const DENOMINATION = '$';
-/* harmony default export */ __webpack_exports__["a"] = (DENOMINATION);
-
-/***/ }),
-
 /***/ "fcRV":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2936,6 +2772,42 @@ function parseRelativeUrl(url, base) {
     href: href.slice(globalBase.origin.length)
   };
 }
+
+/***/ }),
+
+/***/ "i2XQ":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _inventory__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("LaK9");
+
+
+async function fetchCategories() {
+  const categories = _inventory__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].reduce((acc, next) => {
+    next.categories.map(category => {
+      if (acc.includes(category)) return;
+      acc.push(category);
+    });
+    return acc;
+  }, []);
+  return Promise.resolve(categories);
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (fetchCategories);
+
+/***/ }),
+
+/***/ "jDDT":
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "kNaX":
+/***/ (function(module, exports) {
+
+module.exports = require("uuid");
 
 /***/ }),
 
@@ -3202,43 +3074,10 @@ exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denorm
 
 /***/ }),
 
-/***/ "xY5u":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("F5FC");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
-const ImageComponent = (_ref) => {
-  let {
-    src
-  } = _ref,
-      props = _objectWithoutProperties(_ref, ["src"]);
-
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("img", _objectSpread({
-    src: src
-  }, props));
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (ImageComponent);
-
-/***/ }),
-
-/***/ "xnum":
+/***/ "zPlV":
 /***/ (function(module, exports) {
 
-module.exports = require("next/head");
+
 
 /***/ })
 
